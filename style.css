@@ -26,6 +26,7 @@ header {
 
 #name {
    margin: 10px 0;
+   font-size: 2em;
 }
 
 #profile-img {
@@ -128,12 +129,12 @@ body.dark .details {
    background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Detail Buttons — FIXED TEXT COLOR FOR DARK MODE */
+/* Detail Buttons — NO UNDERLINE, WHITE TEXT IN DARK MODE */
 .detail-btn {
    background: none;
    border: none;
    color: #4a90e2; /* Blue text in light mode */
-   text-decoration: underline;
+   text-decoration: none; /* ✅ REMOVED UNDERLINE */
    cursor: pointer;
    font-weight: bold;
    padding: 6px 12px;
@@ -146,13 +147,15 @@ body.dark .details {
 
 .detail-btn:hover {
    color: #357abd;
+   text-decoration: underline; /* Optional: underline on hover only */
 }
 
 /* Dark mode: make button text WHITE for visibility */
 body.dark .detail-btn {
-   color: white; /* ✅ This is the key fix! */
+   color: white; /* ✅ White text in dark mode */
 }
 
 body.dark .detail-btn:hover {
    color: #bbdefb; /* Lighter blue on hover */
+   text-decoration: underline; /* Optional: underline on hover */
 }
