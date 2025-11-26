@@ -128,18 +128,18 @@ body.dark .details {
    background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Detail Buttons — FIXED TEXT VISIBILITY */
+/* Detail Buttons — FIXED TEXT COLOR FOR DARK MODE */
 .detail-btn {
    background: none;
    border: none;
-   color: #4a90e2;
+   color: #4a90e2; /* Blue text in light mode */
    text-decoration: underline;
    cursor: pointer;
    font-weight: bold;
-   padding: 6px 12px; /* Reduced padding for better fit */
+   padding: 6px 12px;
    font-size: 1em;
    display: inline;
-   white-space: nowrap; /* Prevents text from wrapping or hiding */
+   white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
 }
@@ -148,16 +148,11 @@ body.dark .details {
    color: #357abd;
 }
 
+/* Dark mode: make button text WHITE for visibility */
 body.dark .detail-btn {
-   color: #64b5f6;
+   color: white; /* ✅ This is the key fix! */
 }
 
 body.dark .detail-btn:hover {
-   color: #42a5f5;
-}
-
-/* Responsive image */
-img {
-   max-width: 100%;
-   height: auto;
+   color: #bbdefb; /* Lighter blue on hover */
 }
