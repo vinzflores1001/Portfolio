@@ -17,3 +17,13 @@ toggleButton.addEventListener('click', () => {
       localStorage.setItem('theme', 'light');
    }
 });
+
+// Show/hide details for achievements/projects
+function showDetails(id) {
+   const details = document.getElementById(id);
+   if (details.style.display === 'none' || details.style.display === '') {
+      details.style.display = 'block';
+   } else {
+      details.style.display = 'none';
+   }
+}
