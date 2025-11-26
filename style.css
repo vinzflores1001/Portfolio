@@ -39,6 +39,7 @@ header {
 
 #course-year {
    margin: 10px 0;
+   font-style: italic;
 }
 
 /* Buttons */
@@ -110,6 +111,65 @@ section {
    margin-bottom: 40px;
 }
 
+/* About Section */
+#about h2 {
+   margin-bottom: 15px;
+}
+
+#about p {
+   line-height: 1.6;
+   margin-bottom: 15px;
+}
+
+.skills-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   list-style: none;
+   padding: 0;
+   margin: 15px 0;
+}
+
+.skills-list li {
+   background-color: rgba(74, 144, 226, 0.15);
+   padding: 6px 12px;
+   border-radius: 20px;
+   font-size: 0.95em;
+   font-weight: bold;
+}
+
+body.dark .skills-list li {
+   background-color: rgba(100, 181, 246, 0.2);
+   color: #e0e0e0;
+}
+
+/* Social Icons */
+.social-icons {
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+}
+
+.social-icons a {
+   font-size: 1.8em;
+   color: #4a90e2;
+   transition: color 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+   color: #1e88e5;
+   transform: scale(1.1);
+}
+
+body.dark .social-icons a {
+   color: #64b5f6;
+}
+
+body.dark .social-icons a:hover {
+   color: #bbdefb;
+}
+
 /* Achievement/Project Detail Styles */
 .details {
    margin-top: 10px;
@@ -129,33 +189,85 @@ body.dark .details {
    background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Detail Buttons — NO UNDERLINE, WHITE TEXT IN DARK MODE */
+/* Detail Buttons */
 .detail-btn {
    background: none;
    border: none;
-   color: #4a90e2; /* Blue text in light mode */
-   text-decoration: none; /* ✅ REMOVED UNDERLINE */
+   color: #4a90e2;
+   text-decoration: none;
    cursor: pointer;
    font-weight: bold;
    padding: 6px 12px;
    font-size: 1em;
    display: inline;
    white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
 }
 
 .detail-btn:hover {
    color: #357abd;
-   text-decoration: underline; /* Optional: underline on hover only */
+   text-decoration: underline;
 }
 
-/* Dark mode: make button text WHITE for visibility */
 body.dark .detail-btn {
-   color: white; /* ✅ White text in dark mode */
+   color: white;
 }
 
 body.dark .detail-btn:hover {
-   color: #bbdefb; /* Lighter blue on hover */
-   text-decoration: underline; /* Optional: underline on hover */
+   color: #bbdefb;
+}
+
+/* Contact Form */
+#contact h2 {
+   margin-bottom: 20px;
+}
+
+.form-group {
+   margin-bottom: 15px;
+}
+
+.form-group label {
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-family: Arial, sans-serif;
+   font-size: 1em;
+   box-sizing: border-box;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea {
+   background-color: #1e1e1e;
+   border-color: #444;
+   color: white;
+}
+
+#contact-form button {
+   margin-top: 0;
+}
+
+/* Form status message */
+#form-status.success {
+   color: #4caf50;
+}
+
+#form-status.error {
+   color: #f44336;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+   .social-icons {
+      gap: 15px;
+   }
+   .social-icons a {
+      font-size: 1.5em;
+   }
 }
