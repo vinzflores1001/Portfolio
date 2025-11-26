@@ -116,21 +116,19 @@ section {
    border-radius: 6px;
    font-size: 0.95em;
    line-height: 1.5;
-   display: none; /* Hidden by default — JS will toggle this */
+   display: none;
 }
 
-/* Light theme detail background */
 body:not(.dark) .details {
    background-color: rgba(0, 0, 0, 0.03);
    border: 1px solid #e0e0e0;
 }
 
-/* Dark theme detail background */
 body.dark .details {
    background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Detail Buttons */
+/* Detail Buttons — FIXED TEXT VISIBILITY */
 .detail-btn {
    background: none;
    border: none;
@@ -138,9 +136,12 @@ body.dark .details {
    text-decoration: underline;
    cursor: pointer;
    font-weight: bold;
-   padding: 0;
+   padding: 6px 12px; /* Reduced padding for better fit */
    font-size: 1em;
    display: inline;
+   white-space: nowrap; /* Prevents text from wrapping or hiding */
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 
 .detail-btn:hover {
