@@ -19,7 +19,6 @@
                <li><a href="#name">Home</a></li>
                <li><a href="#achievements">Achievements</a></li>
                <li><a href="#projects">Projects</a></li>
-               <!-- Uncomment when you add these sections later -->
                <!-- <li><a href="#about">About</a></li> -->
                <!-- <li><a href="#contact">Contact</a></li> -->
             </ul>
@@ -29,18 +28,57 @@
       <section id="achievements">
          <h2>Achievements/Certifications</h2>
          <ul>
-            <li>Achievement 1</li>
-            <li>Achievement 2</li>
-            <li>Achievement 3</li>
+            <li>
+               <button class="detail-btn" onclick="showDetails('ach1')">🏆 Web Development Bootcamp Certificate</button>
+               <div id="ach1" class="details" style="display:none;">
+                  <p>✔️ Awarded for completing a 12-week intensive course in HTML, CSS, and JavaScript.</p>
+                  <p>📅 Issued: May 2024</p>
+               </div>
+            </li>
+            <li>
+               <button class="detail-btn" onclick="showDetails('ach2')">🏅 Hackathon Runner-Up</button>
+               <div id="ach2" class="details" style="display:none;">
+                  <p>✔️ Placed 2nd in a university hackathon for a student portfolio website.</p>
+                  <p>📅 Event: March 2025</p>
+               </div>
+            </li>
+            <li>
+               <button class="detail-btn" onclick="showDetails('ach3')">📜 Academic Excellence Award</button>
+               <div id="ach3" class="details" style="display:none;">
+                  <p>✔️ Recognized for top 10% academic performance in Computer Science.</p>
+                  <p>📅 Awarded: December 2024</p>
+               </div>
+            </li>
          </ul>
       </section>
 
       <section id="projects">
          <h2>Previous Projects</h2>
          <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
+            <li>
+               <button class="detail-btn" onclick="showDetails('proj1')">🔍 Student Portfolio Website</button>
+               <div id="proj1" class="details" style="display:none;">
+                  <p>✔️ A responsive portfolio built with HTML, CSS, and JavaScript.</p>
+                  <p>🔧 Features: Theme toggle, smooth navigation, expandable details.</p>
+                  <p>📅 Developed: November 2025</p>
+               </div>
+            </li>
+            <li>
+               <button class="detail-btn" onclick="showDetails('proj2')">📊 To-Do List App</button>
+               <div id="proj2" class="details" style="display:none;">
+                  <p>✔️ A simple task manager with local storage support.</p>
+                  <p>🔧 Built with: HTML, CSS, JavaScript</p>
+                  <p>📅 Developed: October 2025</p>
+               </div>
+            </li>
+            <li>
+               <button class="detail-btn" onclick="showDetails('proj3')">🎮 Number Guessing Game</button>
+               <div id="proj3" class="details" style="display:none;">
+                  <p>✔️ A fun CLI-style game in the browser.</p>
+                  <p>🔧 Built with: JavaScript logic and DOM manipulation</p>
+                  <p>📅 Developed: September 2025</p>
+               </div>
+            </li>
          </ul>
       </section>
 
