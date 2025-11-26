@@ -2,7 +2,6 @@
 const toggleButton = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Load saved theme
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
    body.classList.add('dark');
@@ -20,8 +19,6 @@ function showDetails(id) {
       console.error('Element with ID "' + id + '" not found!');
       return;
    }
-
-   // Toggle visibility
    if (details.style.display === 'none' || details.style.display === '') {
       details.style.display = 'block';
    } else {
